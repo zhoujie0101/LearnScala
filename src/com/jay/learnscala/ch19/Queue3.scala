@@ -31,13 +31,4 @@ class Queue3[+T](
   def enqueue[U >: T](x: U): Queue3[U] = {
     new Queue3(leading, x :: trailing)
   }
-
-  class Outer {
-    class Inner
-  }
-
-  def a(): Unit = {
-    val o = new Outer#Inner
-
-  }
 }
